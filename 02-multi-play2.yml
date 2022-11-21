@@ -22,4 +22,10 @@
      file:
        path: /home/centos/n3_dir_1
        state: directory
+
+  tasks:
+   - name: create Directory
+     file:
+       path: /home/centos/n3_dir_2
+       state: directory
 ...
