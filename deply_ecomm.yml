@@ -1,0 +1,16 @@
+---
+- name: Install httpd 
+  hosts: i2
+  become: yes
+
+  tasks:
+   - name: install git
+     yum:
+       name: git
+       state: present
+
+   - name: deploy code
+     git:
+       repo: https://github.com/ravi2krishna/ecomm.git
+       dest: /var/www/html
+...
