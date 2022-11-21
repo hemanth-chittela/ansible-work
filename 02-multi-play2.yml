@@ -13,42 +13,5 @@
    - name: create Directory
      file:
        path: /home/centos/n4_dir
-       state: directory
-
-- name: Update i2 server
-  hosts: i2
-
-  tasks:
-   - name: create Directory
-     file:
-       path: /home/centos/n3_dir
-       state: directory
-
-  tasks:
-   - name: create Directory
-     file:
-       path: /home/centos/n4_dir
-       state: directory
-
-- name: Update g1 server
-  hosts: g1
-
-  tasks:
-   - name: create Directory
-     file:
-       path: /home/centos/n3_dir
-       state: directory
-
-  tasks:
-   - name: create Directory
-     file:
-       path: /home/centos/group
-       state: directory
-
-  tasks:
-   - name: create Directory
-     file:
-       path: /home/centos/group2
-       state: directory
-      
+       state: directory     
 ...
