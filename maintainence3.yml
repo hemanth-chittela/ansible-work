@@ -1,0 +1,11 @@
+---
+- name: Updating to maintainence page 
+  hosts: g1
+  become: yes
+
+  tasks:
+   - name: update maintainence
+     copy:
+       src: host_and_ip.j2
+       dest: /var/www/html/host_and_ip.html
+...
