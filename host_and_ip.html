@@ -1,11 +1,9 @@
----
-- name: Updating to maintainence page 
-  hosts: g1
-  become: yes
-
-  tasks:
-   - name: update maintainence
-     copy:
-       src: Maintenence.html
-       dest: /var/www/html/index.html
-...
+<html>
+  <body>
+    <center>
+    <h1>The server opertaing system:</h1>
+    <br>
+    <h1>The server hostname is:</h1>
+    </center>
+  </body>
+</html>
