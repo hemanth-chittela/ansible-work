@@ -3,9 +3,9 @@
   hosts: g1
   become: yes
   vars:
-    ip-1: 2020
-    ip-2: 2030
-    ip-3: 4550
+    http_port_default: 80
+    http_port_1: 2030
+    http_port_2: 4550
 
   tasks:
    - name: update maintainence
