@@ -1,0 +1,13 @@
+---
+- name: Updating to maintainence page 
+  hosts: g1
+  become: yes
+  vars:
+    myname: hemanth
+
+  tasks:
+   - name: update maintainence
+     template:
+       src: httpd.j2
+       dest: /etc/httpd/conf/httpd.conf
+...
