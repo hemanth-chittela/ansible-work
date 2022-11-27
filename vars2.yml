@@ -4,6 +4,9 @@
   become: yes
   vars:
     myname: hemanth
+    ip-1: 2020
+    ip-2: 2030
+    ip-3: 4550
 
   tasks:
    - name: update maintainence
