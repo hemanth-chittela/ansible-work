@@ -13,7 +13,7 @@
        src: httpd.j2
        dest: /etc/httpd/conf/httpd.conf
 
-   - name: restart
+   - name: restart httpd
      service:
        name: httpd
        state: restarted
