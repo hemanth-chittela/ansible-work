@@ -1,17 +1,22 @@
 ---
 - name: Install HTTP server & Deploy Ecomm App
-  hosts: n1
+  hosts: i1
   become: yes
 
   tasks:
   - name: Install Apache2
-    yum:
+    apt:
       name: apache2
       state: present
+
+  tasks:
+  - name: Remove existing Git repository
+    command:
+      cmd: rm -rf /var/www/html
+    ignore_errors: yes
 
   - name: Host Code
     git:
       repo: https://github.com/ravi2krishna/ecomm.git
       dest: /var/www/html
-      force: yes
 ...
