@@ -1,0 +1,17 @@
+---
+- name: Install HTTP server & Deploy Ecomm App
+  hosts: n1
+  become: yes
+
+  tasks:
+  - name: Install Apache2
+    yum:
+      name: apache2
+      state: present
+
+  - name: Host Code
+    git:
+      repo: https://github.com/ravi2krishna/ecomm.git
+      dest: /var/www/html
+      force: yes
+...
